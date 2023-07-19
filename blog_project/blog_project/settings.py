@@ -29,8 +29,9 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 INSTALLED_APPS = [
+    'users.apps.UsersConfig',
     'blog.apps.BlogConfig',
     "django.contrib.admin",
     "django.contrib.auth",
@@ -38,6 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "crispy_forms",               # I got errors for using crispy forms. So I came to know that you have to put both <"crispy_forms" and "crispy_bootstrap4"> to solve the problem
+    "crispy_bootstrap4",
 ]
 
 MIDDLEWARE = [
